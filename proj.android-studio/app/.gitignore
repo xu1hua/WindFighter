@@ -1,2 +1,6 @@
 /build
 /jniLibs
+assets
+obj
+/local.properties
+libs

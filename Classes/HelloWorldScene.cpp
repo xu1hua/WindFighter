@@ -1,6 +1,5 @@
 #include "HelloWorldScene.h"
-#include "SimpleAudioEngine.h"
-
+#include "GamePlayLayer.h"
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -28,7 +27,7 @@ bool HelloWorld::init()
         return false;
     }
     
-    auto visibleSize = Director::getInstance()->getVisibleSize();
+    Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
     /////////////////////////////
@@ -41,7 +40,7 @@ bool HelloWorld::init()
                                            "CloseSelected.png",
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
-    closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
+	closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
 
     // create menu, it's an autorelease object
@@ -72,7 +71,10 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-    
+	//auto gamePlayLayer = GamePlayLayer::create();
+	//gamePlayLayer->setAnchorPoint(Vec2(0, 0));
+	//gamePlayLayer->setPosition(Vec2(0, 0));
+	//this->addChild(gamePlayLayer);
     return true;
 }
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -96,7 +96,8 @@
       </Command>
     </PostBuildEvent>
     <PreLinkEvent>
-      <Command></Command>
+      <Command>
+      </Command>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup>
@@ -108,7 +109,6 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
       <Inputs>$(TargetFileName)</Inputs>
     </CustomBuildStep>
   </ItemDefinitionGroup>
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <Optimization>MaxSpeed</Optimization>
@@ -139,17 +139,53 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
       </Command>
     </PostBuildEvent>
     <PreLinkEvent>
-      <Command></Command>
+      <Command>
+      </Command>
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\BackgroundLayer.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3DB.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Query.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Statement.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Table.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\GameDB.cpp" />
+    <ClCompile Include="..\Classes\GameLibrary\sqlite\sqlite3.c" />
+    <ClCompile Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools_Win32.cpp" />
+    <ClCompile Include="..\Classes\GamePlayLayer.cpp" />
+    <ClCompile Include="..\Classes\GamePlayScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\MainMenuLayer.cpp" />
+    <ClCompile Include="..\Classes\MainMenuScene.cpp" />
+    <ClCompile Include="..\Classes\MapMakerScene.cpp" />
+    <ClCompile Include="..\Classes\Square.cpp" />
+    <ClCompile Include="..\Classes\SquareBaseplateLayer.cpp" />
+    <ClCompile Include="..\Classes\SquareGroup.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\BackgroundLayer.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3DB.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Query.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Statement.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Table.h" />
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\GameDB.h" />
+    <ClInclude Include="..\Classes\GameLibrary\sqlite\sqlite3.h" />
+    <ClInclude Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools.h" />
+    <ClInclude Include="..\Classes\GamePlayLayer.h" />
+    <ClInclude Include="..\Classes\GamePlayScene.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\Language.h" />
+    <ClInclude Include="..\Classes\MainMenuLayer.h" />
+    <ClInclude Include="..\Classes\MainMenuScene.h" />
+    <ClInclude Include="..\Classes\MapMakerScene.h" />
+    <ClInclude Include="..\Classes\Square.h" />
+    <ClInclude Include="..\Classes\SquareBaseplateLayer.h" />
+    <ClInclude Include="..\Classes\SquareGroup.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
@@ -166,6 +202,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Classes\plan.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\README.md" />
+    <None Include="..\Resources\language\en.plist" />
+    <None Include="..\Resources\language\zh.plist" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -10,6 +10,21 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\GameLibrary">
+      <UniqueIdentifier>{bc49aa8b-ba0f-4d22-b1cb-8afb23f5ac08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameLibrary\sqlite">
+      <UniqueIdentifier>{629d2deb-d583-43a2-9e6f-ec09aaf94d96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameLibrary\UtilityTools">
+      <UniqueIdentifier>{6ed0ebf4-2fae-43cb-b97b-bf0779c93daa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\GameLibrary\Sqlite3Database">
+      <UniqueIdentifier>{25b80de1-c39e-475e-9309-96384d846d14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\language">
+      <UniqueIdentifier>{c683042f-6625-4c85-ab2c-d12933819475}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -20,6 +35,57 @@
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackgroundLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GamePlayLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GamePlayScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainMenuScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MapMakerScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Square.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SquareBaseplateLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\SquareGroup.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\sqlite\sqlite3.c">
+      <Filter>src\GameLibrary\sqlite</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3DB.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Query.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Statement.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Table.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\GameDB.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3.cpp">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools_Win32.cpp">
+      <Filter>src\GameLibrary\UtilityTools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -32,10 +98,80 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\BackgroundLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GamePlayLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GamePlayScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Language.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainMenuScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MapMakerScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Square.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SquareBaseplateLayer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SquareGroup.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\sqlite\sqlite3.h">
+      <Filter>src\GameLibrary\sqlite</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3DB.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Query.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Statement.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3Table.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\GameDB.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\Sqlite3Database\CppSQLite3.h">
+      <Filter>src\GameLibrary\Sqlite3Database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools.h">
+      <Filter>src\GameLibrary\UtilityTools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Classes\plan.txt">
+      <Filter>src</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\README.md">
+      <Filter>src</Filter>
+    </None>
+    <None Include="..\Resources\language\en.plist">
+      <Filter>resource\language</Filter>
+    </None>
+    <None Include="..\Resources\language\zh.plist">
+      <Filter>resource\language</Filter>
+    </None>
   </ItemGroup>
 </Project>

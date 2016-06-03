@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>start_game</key>
+    <string>开始游戏</string>
+    <key>map_maker</key>
+    <string>制作地图</string>
+    <key>create_group</key>
+    <string>创建方块组</string>
+    <key>delete_group</key>
+    <string>删除方块组</string>
+    <key>save_map</key>
+    <string>保存地图</string>
+    <key>back</key>
+    <string>返回</string>
+    <key>input_map_name</key>
+    <string>保存地图</string>
+</dict>
+</plist>

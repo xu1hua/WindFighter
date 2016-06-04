@@ -1,3 +1,4 @@
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32
 #include "GameUtilityTools.h"
 #include <string>
 #include <stdio.h>
@@ -33,3 +34,4 @@ const char* GameUilityTools::CreateGuidString()
 {
 	return (GuidToString(CreateGuid())).c_str();
 }
+#endif

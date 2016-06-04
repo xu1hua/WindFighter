@@ -1,7 +1,7 @@
 #pragma once  
 #include <cstdio>  
 #include <cstring>  
-#include "GameLibrary/sqlite/sqlite3.h"  
+#include "../sqlite/sqlite3.h"  
 
 #define CPPSQLITE_ERROR 1000  //这个宏定义是为了区分库函数中定义的错误代码，专用于自己程序中的异常标示 
 static const bool DONT_DELETE_MSG = false;

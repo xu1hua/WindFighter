@@ -1,7 +1,7 @@
 #pragma once  
 #include <cstdio>  
 #include <cstring>  
-#include "GameLibrary/sqlite/sqlite3.h"  
+#include "../sqlite/sqlite3.h"  
 
 class CppSQLite3Query
 {

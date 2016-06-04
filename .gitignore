@@ -3,3 +3,6 @@ proj.win10
 proj.linux
 proj.win8.1-universal
 /proj.win32/Debug.win32
+/proj.ios_mac/SquareClear.xcodeproj/project.xcworkspace
+/proj.ios_mac/SquareClear.xcodeproj/xcuserdata
+/proj.ios_mac/.DS_Store

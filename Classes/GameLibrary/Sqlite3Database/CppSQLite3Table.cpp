@@ -1,5 +1,5 @@
 #include "CppSQLite3Table.h"
-#include "GameLibrary/sqlite/sqlite3.h"
+#include "../sqlite/sqlite3.h"
 #include "CppSQLite3.h"
 #include "stdlib.h"
 

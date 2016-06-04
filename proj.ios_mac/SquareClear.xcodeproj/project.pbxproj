@@ -12,8 +12,6 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
-		3EACC98F19EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
-		3EACC99019EE6D4300EB3C5E /* res in Resources */ = {isa = PBXBuildFile; fileRef = 3EACC98E19EE6D4300EB3C5E /* res */; };
 		46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7619C43A67006E1F66 /* CloseNormal.png */; };
 		46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 46880B7719C43A67006E1F66 /* CloseSelected.png */; };
@@ -56,8 +54,6 @@
 		50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 50EF62A117ECD613001EB2F8 /* Icon-50.png */; };
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
-		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
-		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
@@ -69,6 +65,34 @@
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
 		ED545A7E1B68A1FA00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7D1B68A1FA00C3958E /* libiconv.dylib */; };
+		FB7F71A41D03070900EF30F8 /* BackgroundLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71791D03070900EF30F8 /* BackgroundLayer.cpp */; };
+		FB7F71A51D03070900EF30F8 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = FB7F717D1D03070900EF30F8 /* sqlite3.c */; };
+		FB7F71A61D03070900EF30F8 /* CppSQLite3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71801D03070900EF30F8 /* CppSQLite3.cpp */; };
+		FB7F71A71D03070900EF30F8 /* CppSQLite3DB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71821D03070900EF30F8 /* CppSQLite3DB.cpp */; };
+		FB7F71A81D03070900EF30F8 /* CppSQLite3Query.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71841D03070900EF30F8 /* CppSQLite3Query.cpp */; };
+		FB7F71A91D03070900EF30F8 /* CppSQLite3Statement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71861D03070900EF30F8 /* CppSQLite3Statement.cpp */; };
+		FB7F71AA1D03070900EF30F8 /* CppSQLite3Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71881D03070900EF30F8 /* CppSQLite3Table.cpp */; };
+		FB7F71AB1D03070900EF30F8 /* GameDB.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F718A1D03070900EF30F8 /* GameDB.cpp */; };
+		FB7F71AC1D03070900EF30F8 /* GameUtilityTools_IOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB7F718E1D03070900EF30F8 /* GameUtilityTools_IOS.mm */; };
+		FB7F71AD1D03070900EF30F8 /* GameUtilityTools_Win32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F718F1D03070900EF30F8 /* GameUtilityTools_Win32.cpp */; };
+		FB7F71AE1D03070900EF30F8 /* GamePlayLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71911D03070900EF30F8 /* GamePlayLayer.cpp */; };
+		FB7F71AF1D03070900EF30F8 /* GamePlayScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71931D03070900EF30F8 /* GamePlayScene.cpp */; };
+		FB7F71B01D03070900EF30F8 /* MainMenuLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71961D03070900EF30F8 /* MainMenuLayer.cpp */; };
+		FB7F71B11D03070900EF30F8 /* MainMenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71981D03070900EF30F8 /* MainMenuScene.cpp */; };
+		FB7F71B21D03070900EF30F8 /* MapMakerScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F719A1D03070900EF30F8 /* MapMakerScene.cpp */; };
+		FB7F71B31D03070900EF30F8 /* plan.txt in Resources */ = {isa = PBXBuildFile; fileRef = FB7F719C1D03070900EF30F8 /* plan.txt */; };
+		FB7F71B41D03070900EF30F8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB7F719D1D03070900EF30F8 /* README.md */; };
+		FB7F71B51D03070900EF30F8 /* Square.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F719E1D03070900EF30F8 /* Square.cpp */; };
+		FB7F71B61D03070900EF30F8 /* SquareBaseplateLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71A01D03070900EF30F8 /* SquareBaseplateLayer.cpp */; };
+		FB7F71B71D03070900EF30F8 /* SquareGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71A21D03070900EF30F8 /* SquareGroup.cpp */; };
+		FB7F71C31D03074300EF30F8 /* ButtonArrowOrangeDown.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71BB1D03074300EF30F8 /* ButtonArrowOrangeDown.png */; };
+		FB7F71C41D03074300EF30F8 /* ButtonArrowOrangeLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71BC1D03074300EF30F8 /* ButtonArrowOrangeLeft.png */; };
+		FB7F71C51D03074300EF30F8 /* ButtonArrowOrangeRight.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71BD1D03074300EF30F8 /* ButtonArrowOrangeRight.png */; };
+		FB7F71C61D03074300EF30F8 /* ButtonArrowOrangeUp.png in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71BE1D03074300EF30F8 /* ButtonArrowOrangeUp.png */; };
+		FB7F71C71D03074300EF30F8 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71BF1D03074300EF30F8 /* fonts */; };
+		FB7F71C81D03074300EF30F8 /* language in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C01D03074300EF30F8 /* language */; };
+		FB7F71C91D03074300EF30F8 /* map.db in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C11D03074300EF30F8 /* map.db */; };
+		FB7F71CA1D03074300EF30F8 /* res in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C21D03074300EF30F8 /* res */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +124,13 @@
 			remoteGlobalIDString = A07A4C241783777C0073F6A7;
 			remoteInfo = "cocos2dx iOS";
 		};
+		FB7F71B91D03070900EF30F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 507B40FD1C31BDD30067B53E;
+			remoteInfo = "libcocos2d tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -109,7 +140,6 @@
 		1D6058910D05DD3D006BFB54 /* SquareClear-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SquareClear-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3EACC98E19EE6D4300EB3C5E /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		46880B7619C43A67006E1F66 /* CloseNormal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseNormal.png; sourceTree = "<group>"; };
 		46880B7719C43A67006E1F66 /* CloseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseSelected.png; sourceTree = "<group>"; };
 		46880B7A19C43A67006E1F66 /* HelloWorld.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelloWorld.png; sourceTree = "<group>"; };
@@ -151,7 +181,6 @@
 		50EF62A117ECD613001EB2F8 /* Icon-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-50.png"; sourceTree = "<group>"; };
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
-		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -163,6 +192,53 @@
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		FB7F71791D03070900EF30F8 /* BackgroundLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BackgroundLayer.cpp; sourceTree = "<group>"; };
+		FB7F717A1D03070900EF30F8 /* BackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundLayer.h; sourceTree = "<group>"; };
+		FB7F717D1D03070900EF30F8 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		FB7F717E1D03070900EF30F8 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		FB7F71801D03070900EF30F8 /* CppSQLite3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3.cpp; sourceTree = "<group>"; };
+		FB7F71811D03070900EF30F8 /* CppSQLite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppSQLite3.h; sourceTree = "<group>"; };
+		FB7F71821D03070900EF30F8 /* CppSQLite3DB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3DB.cpp; sourceTree = "<group>"; };
+		FB7F71831D03070900EF30F8 /* CppSQLite3DB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppSQLite3DB.h; sourceTree = "<group>"; };
+		FB7F71841D03070900EF30F8 /* CppSQLite3Query.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3Query.cpp; sourceTree = "<group>"; };
+		FB7F71851D03070900EF30F8 /* CppSQLite3Query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppSQLite3Query.h; sourceTree = "<group>"; };
+		FB7F71861D03070900EF30F8 /* CppSQLite3Statement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3Statement.cpp; sourceTree = "<group>"; };
+		FB7F71871D03070900EF30F8 /* CppSQLite3Statement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppSQLite3Statement.h; sourceTree = "<group>"; };
+		FB7F71881D03070900EF30F8 /* CppSQLite3Table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CppSQLite3Table.cpp; sourceTree = "<group>"; };
+		FB7F71891D03070900EF30F8 /* CppSQLite3Table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CppSQLite3Table.h; sourceTree = "<group>"; };
+		FB7F718A1D03070900EF30F8 /* GameDB.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameDB.cpp; sourceTree = "<group>"; };
+		FB7F718B1D03070900EF30F8 /* GameDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameDB.h; sourceTree = "<group>"; };
+		FB7F718D1D03070900EF30F8 /* GameUtilityTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameUtilityTools.h; sourceTree = "<group>"; };
+		FB7F718E1D03070900EF30F8 /* GameUtilityTools_IOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameUtilityTools_IOS.mm; sourceTree = "<group>"; };
+		FB7F718F1D03070900EF30F8 /* GameUtilityTools_Win32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUtilityTools_Win32.cpp; sourceTree = "<group>"; };
+		FB7F71901D03070900EF30F8 /* xguid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xguid.h; sourceTree = "<group>"; };
+		FB7F71911D03070900EF30F8 /* GamePlayLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePlayLayer.cpp; sourceTree = "<group>"; };
+		FB7F71921D03070900EF30F8 /* GamePlayLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayLayer.h; sourceTree = "<group>"; };
+		FB7F71931D03070900EF30F8 /* GamePlayScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GamePlayScene.cpp; sourceTree = "<group>"; };
+		FB7F71941D03070900EF30F8 /* GamePlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePlayScene.h; sourceTree = "<group>"; };
+		FB7F71951D03070900EF30F8 /* Language.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Language.h; sourceTree = "<group>"; };
+		FB7F71961D03070900EF30F8 /* MainMenuLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuLayer.cpp; sourceTree = "<group>"; };
+		FB7F71971D03070900EF30F8 /* MainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuLayer.h; sourceTree = "<group>"; };
+		FB7F71981D03070900EF30F8 /* MainMenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuScene.cpp; sourceTree = "<group>"; };
+		FB7F71991D03070900EF30F8 /* MainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuScene.h; sourceTree = "<group>"; };
+		FB7F719A1D03070900EF30F8 /* MapMakerScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapMakerScene.cpp; sourceTree = "<group>"; };
+		FB7F719B1D03070900EF30F8 /* MapMakerScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapMakerScene.h; sourceTree = "<group>"; };
+		FB7F719C1D03070900EF30F8 /* plan.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = plan.txt; sourceTree = "<group>"; };
+		FB7F719D1D03070900EF30F8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB7F719E1D03070900EF30F8 /* Square.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Square.cpp; sourceTree = "<group>"; };
+		FB7F719F1D03070900EF30F8 /* Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Square.h; sourceTree = "<group>"; };
+		FB7F71A01D03070900EF30F8 /* SquareBaseplateLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SquareBaseplateLayer.cpp; sourceTree = "<group>"; };
+		FB7F71A11D03070900EF30F8 /* SquareBaseplateLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareBaseplateLayer.h; sourceTree = "<group>"; };
+		FB7F71A21D03070900EF30F8 /* SquareGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SquareGroup.cpp; sourceTree = "<group>"; };
+		FB7F71A31D03070900EF30F8 /* SquareGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SquareGroup.h; sourceTree = "<group>"; };
+		FB7F71BB1D03074300EF30F8 /* ButtonArrowOrangeDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonArrowOrangeDown.png; sourceTree = "<group>"; };
+		FB7F71BC1D03074300EF30F8 /* ButtonArrowOrangeLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonArrowOrangeLeft.png; sourceTree = "<group>"; };
+		FB7F71BD1D03074300EF30F8 /* ButtonArrowOrangeRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonArrowOrangeRight.png; sourceTree = "<group>"; };
+		FB7F71BE1D03074300EF30F8 /* ButtonArrowOrangeUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonArrowOrangeUp.png; sourceTree = "<group>"; };
+		FB7F71BF1D03074300EF30F8 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		FB7F71C01D03074300EF30F8 /* language */ = {isa = PBXFileReference; lastKnownFileType = folder; path = language; sourceTree = "<group>"; };
+		FB7F71C11D03074300EF30F8 /* map.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = map.db; sourceTree = "<group>"; };
+		FB7F71C21D03074300EF30F8 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +313,7 @@
 			children = (
 				1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */,
 				1AC6FB07180E9839004C840B /* libcocos2d iOS.a */,
+				FB7F71BA1D03070900EF30F8 /* libcocos2d tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,8 +361,14 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				521A8EA819F11F5000D177D7 /* fonts */,
-				3EACC98E19EE6D4300EB3C5E /* res */,
+				FB7F71BB1D03074300EF30F8 /* ButtonArrowOrangeDown.png */,
+				FB7F71BC1D03074300EF30F8 /* ButtonArrowOrangeLeft.png */,
+				FB7F71BD1D03074300EF30F8 /* ButtonArrowOrangeRight.png */,
+				FB7F71BE1D03074300EF30F8 /* ButtonArrowOrangeUp.png */,
+				FB7F71BF1D03074300EF30F8 /* fonts */,
+				FB7F71C01D03074300EF30F8 /* language */,
+				FB7F71C11D03074300EF30F8 /* map.db */,
+				FB7F71C21D03074300EF30F8 /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
@@ -297,6 +380,28 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FB7F71791D03070900EF30F8 /* BackgroundLayer.cpp */,
+				FB7F717A1D03070900EF30F8 /* BackgroundLayer.h */,
+				FB7F717B1D03070900EF30F8 /* GameLibrary */,
+				FB7F71911D03070900EF30F8 /* GamePlayLayer.cpp */,
+				FB7F71921D03070900EF30F8 /* GamePlayLayer.h */,
+				FB7F71931D03070900EF30F8 /* GamePlayScene.cpp */,
+				FB7F71941D03070900EF30F8 /* GamePlayScene.h */,
+				FB7F71951D03070900EF30F8 /* Language.h */,
+				FB7F71961D03070900EF30F8 /* MainMenuLayer.cpp */,
+				FB7F71971D03070900EF30F8 /* MainMenuLayer.h */,
+				FB7F71981D03070900EF30F8 /* MainMenuScene.cpp */,
+				FB7F71991D03070900EF30F8 /* MainMenuScene.h */,
+				FB7F719A1D03070900EF30F8 /* MapMakerScene.cpp */,
+				FB7F719B1D03070900EF30F8 /* MapMakerScene.h */,
+				FB7F719C1D03070900EF30F8 /* plan.txt */,
+				FB7F719D1D03070900EF30F8 /* README.md */,
+				FB7F719E1D03070900EF30F8 /* Square.cpp */,
+				FB7F719F1D03070900EF30F8 /* Square.h */,
+				FB7F71A01D03070900EF30F8 /* SquareBaseplateLayer.cpp */,
+				FB7F71A11D03070900EF30F8 /* SquareBaseplateLayer.h */,
+				FB7F71A21D03070900EF30F8 /* SquareGroup.cpp */,
+				FB7F71A31D03070900EF30F8 /* SquareGroup.h */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
@@ -352,6 +457,55 @@
 			name = Icons;
 			path = ios;
 			sourceTree = SOURCE_ROOT;
+		};
+		FB7F717B1D03070900EF30F8 /* GameLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				FB7F717C1D03070900EF30F8 /* sqlite */,
+				FB7F717F1D03070900EF30F8 /* Sqlite3Database */,
+				FB7F718C1D03070900EF30F8 /* UtilityTools */,
+			);
+			path = GameLibrary;
+			sourceTree = "<group>";
+		};
+		FB7F717C1D03070900EF30F8 /* sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				FB7F717D1D03070900EF30F8 /* sqlite3.c */,
+				FB7F717E1D03070900EF30F8 /* sqlite3.h */,
+			);
+			path = sqlite;
+			sourceTree = "<group>";
+		};
+		FB7F717F1D03070900EF30F8 /* Sqlite3Database */ = {
+			isa = PBXGroup;
+			children = (
+				FB7F71801D03070900EF30F8 /* CppSQLite3.cpp */,
+				FB7F71811D03070900EF30F8 /* CppSQLite3.h */,
+				FB7F71821D03070900EF30F8 /* CppSQLite3DB.cpp */,
+				FB7F71831D03070900EF30F8 /* CppSQLite3DB.h */,
+				FB7F71841D03070900EF30F8 /* CppSQLite3Query.cpp */,
+				FB7F71851D03070900EF30F8 /* CppSQLite3Query.h */,
+				FB7F71861D03070900EF30F8 /* CppSQLite3Statement.cpp */,
+				FB7F71871D03070900EF30F8 /* CppSQLite3Statement.h */,
+				FB7F71881D03070900EF30F8 /* CppSQLite3Table.cpp */,
+				FB7F71891D03070900EF30F8 /* CppSQLite3Table.h */,
+				FB7F718A1D03070900EF30F8 /* GameDB.cpp */,
+				FB7F718B1D03070900EF30F8 /* GameDB.h */,
+			);
+			path = Sqlite3Database;
+			sourceTree = "<group>";
+		};
+		FB7F718C1D03070900EF30F8 /* UtilityTools */ = {
+			isa = PBXGroup;
+			children = (
+				FB7F718D1D03070900EF30F8 /* GameUtilityTools.h */,
+				FB7F718E1D03070900EF30F8 /* GameUtilityTools_IOS.mm */,
+				FB7F718F1D03070900EF30F8 /* GameUtilityTools_Win32.cpp */,
+				FB7F71901D03070900EF30F8 /* xguid.h */,
+			);
+			path = UtilityTools;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -441,6 +595,13 @@
 			remoteRef = 1AC6FB06180E9839004C840B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		FB7F71BA1D03070900EF30F8 /* libcocos2d tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libcocos2d tvOS.a";
+			remoteRef = FB7F71B91D03070900EF30F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -449,25 +610,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				FB7F71B31D03070900EF30F8 /* plan.txt in Resources */,
+				FB7F71C41D03074300EF30F8 /* ButtonArrowOrangeLeft.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				FB7F71C51D03074300EF30F8 /* ButtonArrowOrangeRight.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				FB7F71C71D03074300EF30F8 /* fonts in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
-				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				FB7F71C61D03074300EF30F8 /* ButtonArrowOrangeUp.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				FB7F71C91D03074300EF30F8 /* map.db in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
+				FB7F71CA1D03074300EF30F8 /* res in Resources */,
+				FB7F71C81D03074300EF30F8 /* language in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
-				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				FB7F71C31D03074300EF30F8 /* ButtonArrowOrangeDown.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -480,8 +648,6 @@
 			files = (
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
-				3EACC99019EE6D4300EB3C5E /* res in Resources */,
-				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
@@ -494,11 +660,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB7F71A71D03070900EF30F8 /* CppSQLite3DB.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				FB7F71B21D03070900EF30F8 /* MapMakerScene.cpp in Sources */,
+				FB7F71B41D03070900EF30F8 /* README.md in Sources */,
+				FB7F71AD1D03070900EF30F8 /* GameUtilityTools_Win32.cpp in Sources */,
+				FB7F71B01D03070900EF30F8 /* MainMenuLayer.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				FB7F71AA1D03070900EF30F8 /* CppSQLite3Table.cpp in Sources */,
+				FB7F71A91D03070900EF30F8 /* CppSQLite3Statement.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				FB7F71AC1D03070900EF30F8 /* GameUtilityTools_IOS.mm in Sources */,
+				FB7F71AB1D03070900EF30F8 /* GameDB.cpp in Sources */,
+				FB7F71B51D03070900EF30F8 /* Square.cpp in Sources */,
+				FB7F71A81D03070900EF30F8 /* CppSQLite3Query.cpp in Sources */,
+				FB7F71A51D03070900EF30F8 /* sqlite3.c in Sources */,
+				FB7F71A41D03070900EF30F8 /* BackgroundLayer.cpp in Sources */,
+				FB7F71B61D03070900EF30F8 /* SquareBaseplateLayer.cpp in Sources */,
+				FB7F71A61D03070900EF30F8 /* CppSQLite3.cpp in Sources */,
+				FB7F71AE1D03070900EF30F8 /* GamePlayLayer.cpp in Sources */,
+				FB7F71AF1D03070900EF30F8 /* GamePlayScene.cpp in Sources */,
+				FB7F71B71D03070900EF30F8 /* SquareGroup.cpp in Sources */,
+				FB7F71B11D03070900EF30F8 /* MainMenuScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

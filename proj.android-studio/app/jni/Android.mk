@@ -28,7 +28,8 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/CppSQLite3Statement.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/CppSQLite3DB.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/GameDB.cpp \
-				   ../../../Classes/GameLibrary/sqlite/sqlite3.c
+				   ../../../Classes/GameLibrary/sqlite/sqlite3.c \
+				   ../../../Classes/GameLibrary/UtilityTools/GameUtilityTools_Android.cpp
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../../Classes
 LOCAL_C_INCLUDES += $(LOCAL_PATH)/../../../Classes/GameLibrary/Sqlite3Database

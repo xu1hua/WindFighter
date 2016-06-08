@@ -93,6 +93,7 @@
 		FB7F71C81D03074300EF30F8 /* language in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C01D03074300EF30F8 /* language */; };
 		FB7F71C91D03074300EF30F8 /* map.db in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C11D03074300EF30F8 /* map.db */; };
 		FB7F71CA1D03074300EF30F8 /* res in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C21D03074300EF30F8 /* res */; };
+		FB7F71CC1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71CB1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,7 @@
 		FB7F71C01D03074300EF30F8 /* language */ = {isa = PBXFileReference; lastKnownFileType = folder; path = language; sourceTree = "<group>"; };
 		FB7F71C11D03074300EF30F8 /* map.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = map.db; sourceTree = "<group>"; };
 		FB7F71C21D03074300EF30F8 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
+		FB7F71CB1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUtilityTools_Android.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +505,7 @@
 				FB7F718E1D03070900EF30F8 /* GameUtilityTools_IOS.mm */,
 				FB7F718F1D03070900EF30F8 /* GameUtilityTools_Win32.cpp */,
 				FB7F71901D03070900EF30F8 /* xguid.h */,
+				FB7F71CB1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp */,
 			);
 			path = UtilityTools;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 			files = (
 				FB7F71A71D03070900EF30F8 /* CppSQLite3DB.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				FB7F71CC1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp in Sources */,
 				FB7F71B21D03070900EF30F8 /* MapMakerScene.cpp in Sources */,
 				FB7F71B41D03070900EF30F8 /* README.md in Sources */,
 				FB7F71AD1D03070900EF30F8 /* GameUtilityTools_Win32.cpp in Sources */,

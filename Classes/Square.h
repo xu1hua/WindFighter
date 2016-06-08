@@ -83,6 +83,9 @@ public:
     {
         _color4F.a = a;
     }
+
+	//计算在group中的相对位置，返回左下角的位置
+	cocos2d::Vec2 calcPosInGroup(Vec2 squareSize);
 	void drawSquare(cocos2d::DrawNode* drawNode, Vec2 squareSize);
 	void drawSquareWithFrame(cocos2d::DrawNode* drawNode, Vec2 squareSize, Color4F frameColor);
 	void drawFrame(cocos2d::DrawNode* drawNode, Vec2 squareSize, Color4F frameColor);

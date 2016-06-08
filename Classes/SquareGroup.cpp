@@ -304,26 +304,9 @@ bool SquareGroup::onTouchBegan(Touch *touch, Event *event)
 			
 			setArrowButtonVisible(false);
 
-			//检查是否所有放块可以放入baseplate中
-			bool allCheckedEmpty = true;
-			for (auto &sq : *m_groupArray)
-			{
-				
-				if (sq.indexInBaseplate == -1 )
-				{
-					allCheckedEmpty = false;
-					break;
-				}
-				SquareBaseplateState state = SquareBaseplateLayer::getInstance()->getSquareState(sq.indexInBaseplate);
-				if (state != SQBS_EMPTY && state != SQBS_FRAME)
-				{
-					allCheckedEmpty = false;
-					break;
-				}
-			}
-
+			
 			Vec2 worldPlacePos, localSquarePos;
-			if (allCheckedEmpty)
+			if (checkGroupCanPlaced())
 			{
 				for (auto &sq : *m_groupArray)
 				{
@@ -358,6 +341,30 @@ bool SquareGroup::onTouchBegan(Touch *touch, Event *event)
     DrawGroup();
     
     return true;
+}
+
+bool SquareGroup::checkGroupCanPlaced()
+{
+	for (auto &sq : *m_groupArray)
+	{
+
+		if (sq.indexInBaseplate == -1)
+		{
+			return false;
+			break;
+		}
+		SquareBaseplateState state = SquareBaseplateLayer::getInstance()->getSquareState(sq.indexInBaseplate);
+		if (state != SQBS_EMPTY && state != SQBS_FRAME)
+		{
+			return false;
+			break;
+		}
+	}
+}
+
+bool SquareGroup::calcSquareIsTouched(Vec2 pos)
+{//todo
+	return false;
 }
 
 void SquareGroup::onTouchMoved(Touch *touch, Event *event)

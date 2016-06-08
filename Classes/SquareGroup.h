@@ -86,7 +86,14 @@ public:
 	void setUpDownArrowButtonVisible(bool flag);
     // Overrides
     virtual bool onTouchBegan(Touch *touch, Event *event) override;
-    virtual void onTouchMoved(Touch *touch, Event *event) override;
+
+	//检查是否所有放块可以放入baseplate中
+	bool checkGroupCanPlaced();
+
+	//计算square在group中的相对锚点的坐标，返回左上角
+	bool calcSquareIsTouched(Vec2 pos);
+
+	virtual void onTouchMoved(Touch *touch, Event *event) override;
 	virtual void onTouchEnded(Touch *touch, Event *event) override;
     virtual void onTouchCancelled(Touch *touch, Event *event) override;
     

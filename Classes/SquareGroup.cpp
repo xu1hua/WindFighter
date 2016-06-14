@@ -334,13 +334,18 @@ bool SquareGroup::onTouchBegan(Touch *touch, Event *event)
         return false;
     }
 	
-	
-	setArrowButtonVisible(true);
-	setBaseplateFrameByGroup(getGroupState() == SGS_PLACED);
-	setGroupState(SGS_SELECTED);
-    DrawGroup();
+	if(calcSquareIsTouched(touch))
+	{//如果点中group中的方块，才认为是选中的group
+		setArrowButtonVisible(true);
+		setBaseplateFrameByGroup(getGroupState() == SGS_PLACED);
+		setGroupState(SGS_SELECTED);
+		DrawGroup();
+		return true;
+	}
+
+	return false;
     
-    return true;
+    
 }
 
 bool SquareGroup::checkGroupCanPlaced()
@@ -360,10 +365,23 @@ bool SquareGroup::checkGroupCanPlaced()
 			break;
 		}
 	}
+	return true;
 }
 
-bool SquareGroup::calcSquareIsTouched(Vec2 pos)
+bool SquareGroup::calcSquareIsTouched(Touch* touch)
 {//todo
+	//获得在本节点内的坐标
+	Vec2 pt2 = this->convertTouchToNodeSpace(touch);
+	for (auto sqs : *m_groupArray)
+	{
+		Vec2 pos = sqs.square->calcPosInGroup(m_squareSize);
+		Rect rect = Rect(pos, Size(m_squareSize.x, m_squareSize.y));
+		if (rect.containsPoint(pt2))
+		{
+			CCLOG("TOUCH TEST:%d,%d", sqs.square->getIndexX(),sqs.square->getIndexY());
+			return true;
+		}
+	}
 	return false;
 }
 

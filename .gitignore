@@ -6,3 +6,6 @@ proj.win8.1-universal
 /proj.ios_mac/SquareClear.xcodeproj/project.xcworkspace
 /proj.ios_mac/SquareClear.xcodeproj/xcuserdata
 /proj.ios_mac/.DS_Store
+/proj.win32/SquareClear.v12.suo
+/proj.win32/SquareClear.opensdf
+/proj.win32/SquareClear.sdf

@@ -91,7 +91,7 @@ public:
 	bool checkGroupCanPlaced();
 
 	//计算square在group中的相对锚点的坐标，返回左上角
-	bool calcSquareIsTouched(Vec2 pos);
+	bool calcSquareIsTouched(Touch* touch);
 
 	virtual void onTouchMoved(Touch *touch, Event *event) override;
 	virtual void onTouchEnded(Touch *touch, Event *event) override;

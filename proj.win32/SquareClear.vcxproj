@@ -160,6 +160,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\MainMenuLayer.cpp" />
     <ClCompile Include="..\Classes\MainMenuScene.cpp" />
     <ClCompile Include="..\Classes\MapMakerScene.cpp" />
+    <ClCompile Include="..\Classes\SelectColorLayer.cpp" />
     <ClCompile Include="..\Classes\Square.cpp" />
     <ClCompile Include="..\Classes\SquareBaseplateLayer.cpp" />
     <ClCompile Include="..\Classes\SquareGroup.cpp" />
@@ -183,6 +184,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="..\Classes\MainMenuLayer.h" />
     <ClInclude Include="..\Classes\MainMenuScene.h" />
     <ClInclude Include="..\Classes\MapMakerScene.h" />
+    <ClInclude Include="..\Classes\SelectColorLayer.h" />
     <ClInclude Include="..\Classes\Square.h" />
     <ClInclude Include="..\Classes\SquareBaseplateLayer.h" />
     <ClInclude Include="..\Classes\SquareGroup.h" />

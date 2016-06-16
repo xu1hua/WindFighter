@@ -7,6 +7,7 @@
 #include "GameLibrary/Sqlite3Database/CppSQLite3DB.h"
 #include "GameLibrary/UtilityTools/GameUtilityTools.h"
 #include "GameLibrary/Sqlite3Database/GameDB.h"
+#include "SelectColorLayer.h"
 USING_NS_CC;
 
 class SquareGroupMapMaker : public SquareGroup
@@ -70,6 +71,7 @@ bool MapMakerScene::init()
 	addChild(pTextField,0,"tbMapName");
 	pTextField->setPosition(Vec2(s.width / 2,s.height - 250));
 
+	//输入事件
 	auto listener = EventListenerTouchOneByOne::create();
 	listener->onTouchBegan = [pTextField](Touch* touch, Event*)
 	{
@@ -98,6 +100,7 @@ bool MapMakerScene::init()
 	};
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
 
+	//返回主菜单
 	auto returnToMainMenuItem = MenuItemImage::create(
 		"CloseNormal.png",
 		"CloseSelected.png",
@@ -109,6 +112,7 @@ bool MapMakerScene::init()
 	menu->setPosition(Vec2::ZERO);
 	this->addChild(menu, 1);
     
+	//baseplate
     auto baseplateLayer = SquareBaseplateLayer::create();
     baseplateLayer->createEmptyMap(BaseSize(15,15));
     baseplateLayer->drawBasesplate(Vec2(32,32));
@@ -116,7 +120,7 @@ bool MapMakerScene::init()
     addChild(baseplateLayer);
     
 
-    
+    //菜单，创建group
     auto menuItemCreateGroup = MenuItemFont::create(LocalizedCStringByKey("create_group"));
     menuItemCreateGroup->setCallback(
     [=](Ref*)
@@ -128,6 +132,7 @@ bool MapMakerScene::init()
         this->addChild(squareGroup);
     }
     );
+	//菜单，删除group
     auto menuItemDeleteSelectedGroup = MenuItemFont::create(LocalizedCStringByKey("delete_group"));
     menuItemDeleteSelectedGroup->setCallback(
     [=](Ref*)
@@ -145,6 +150,7 @@ bool MapMakerScene::init()
         }
     }
     );
+	//菜单，保存地图
     auto menuItemSaveMap = MenuItemFont::create(LocalizedCStringByKey("save_map"));
     menuItemSaveMap->setCallback(
     [=](Ref*)
@@ -152,15 +158,20 @@ bool MapMakerScene::init()
 		saveMapToFile();
     }
     );
-    
+    //创建菜单组
     auto operationMenu = Menu::create(menuItemCreateGroup,menuItemDeleteSelectedGroup,menuItemSaveMap, NULL);
     operationMenu->alignItemsVerticallyWithPadding(20);
     
     addChild(operationMenu);
     operationMenu->setPosition(Vec2(s.width / 2, s.height - 100));
     
+	//产生本地图的guid
 	m_guid = GameUilityTools::CreateGuidString();
 
+	//添加选择颜色的层
+	auto colorLayer = SelectColorLayer::create();
+	colorLayer->setPosition(Vec2(0, 0));
+	addChild(colorLayer, 0);
 	return true;
 }
 

@@ -87,6 +87,9 @@
     <ClCompile Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools_Win32.cpp">
       <Filter>src\GameLibrary\UtilityTools</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\SelectColorLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -151,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\GameLibrary\UtilityTools\GameUtilityTools.h">
       <Filter>src\GameLibrary\UtilityTools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\SelectColorLayer.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

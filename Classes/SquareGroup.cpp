@@ -369,7 +369,7 @@ bool SquareGroup::checkGroupCanPlaced()
 }
 
 bool SquareGroup::calcSquareIsTouched(Touch* touch)
-{//todo
+{
 	//获得在本节点内的坐标
 	Vec2 pt2 = this->convertTouchToNodeSpace(touch);
 	for (auto sqs : *m_groupArray)

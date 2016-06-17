@@ -10,7 +10,10 @@
 #define SelectColorLayer_h__
 #include <stdio.h>
 #include "cocos2d.h"
-class Square;
+#include "Square.h"
+typedef std::function<void(Square::SQUARE_COLOR color)> ColorChangeCallback;
+
+
 class SelectColorLayer : public cocos2d::Layer
 {
 public:
@@ -19,12 +22,20 @@ public:
 	~SelectColorLayer();
 	virtual bool init();
 
+	void setColorChangeListener(const ColorChangeCallback& callback) { m_colorChangeCallback = callback; }
+	Square::SQUARE_COLOR getSelectedColor() const { return m_selectedColor; }
+
 protected:
 private:
 	std::vector<Square * > * m_ColorList;
 	cocos2d::DrawNode * m_drawColorList;
+	Square::SQUARE_COLOR m_selectedColor;
 	void drawColorLayer();
 
+	ColorChangeCallback m_colorChangeCallback;
+	// Overrides
+	virtual bool onTouchBegan(Touch *touch, Event *event) override;
+	virtual void onTouchMoved(Touch *touch, Event *event) override;
 };
 #include <stdio.h>
 #include "cocos2d.h"

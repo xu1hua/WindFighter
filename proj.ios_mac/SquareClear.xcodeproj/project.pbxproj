@@ -94,6 +94,7 @@
 		FB7F71C91D03074300EF30F8 /* map.db in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C11D03074300EF30F8 /* map.db */; };
 		FB7F71CA1D03074300EF30F8 /* res in Resources */ = {isa = PBXBuildFile; fileRef = FB7F71C21D03074300EF30F8 /* res */; };
 		FB7F71CC1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71CB1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp */; };
+		FB7F71CF1D12D55A00EF30F8 /* SelectColorLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FB7F71CD1D12D55A00EF30F8 /* SelectColorLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +242,8 @@
 		FB7F71C11D03074300EF30F8 /* map.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = map.db; sourceTree = "<group>"; };
 		FB7F71C21D03074300EF30F8 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		FB7F71CB1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameUtilityTools_Android.cpp; sourceTree = "<group>"; };
+		FB7F71CD1D12D55A00EF30F8 /* SelectColorLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectColorLayer.cpp; sourceTree = "<group>"; };
+		FB7F71CE1D12D55A00EF30F8 /* SelectColorLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectColorLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +385,8 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FB7F71CD1D12D55A00EF30F8 /* SelectColorLayer.cpp */,
+				FB7F71CE1D12D55A00EF30F8 /* SelectColorLayer.h */,
 				FB7F71791D03070900EF30F8 /* BackgroundLayer.cpp */,
 				FB7F717A1D03070900EF30F8 /* BackgroundLayer.h */,
 				FB7F717B1D03070900EF30F8 /* GameLibrary */,
@@ -664,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7F71A71D03070900EF30F8 /* CppSQLite3DB.cpp in Sources */,
+				FB7F71CF1D12D55A00EF30F8 /* SelectColorLayer.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				FB7F71CC1D05AE5500EF30F8 /* GameUtilityTools_Android.cpp in Sources */,
 				FB7F71B21D03070900EF30F8 /* MapMakerScene.cpp in Sources */,

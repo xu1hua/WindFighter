@@ -9,3 +9,6 @@ proj.win8.1-universal
 /proj.win32/SquareClear.v12.suo
 /proj.win32/SquareClear.opensdf
 /proj.win32/SquareClear.sdf
+/bin
+/proj.android-studio/app/build.xml
+/proj.android-studio/app/proguard-project.txt

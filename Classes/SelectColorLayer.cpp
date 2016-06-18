@@ -11,6 +11,8 @@ SelectColorLayer::SelectColorLayer()
 
 	this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
 	listener->setSwallowTouches(true);
+    
+    m_colorSquareSize = Size(64,64);
 }
 
 SelectColorLayer::~SelectColorLayer()
@@ -51,22 +53,62 @@ void SelectColorLayer::drawColorLayer()
 	{
 		if (sq->GetColor() == m_selectedColor)
 		{
-			sq->drawSquareWithFrame(m_drawColorList, Vec2(64, 64), Color4F::GREEN);
+			sq->drawSquareWithFrame(m_drawColorList, getSquareSize(), Color4F::GREEN);
 		}
 		else
 		{
-			sq->drawSquareWithFrame(m_drawColorList, Vec2(64, 64), Color4F::WHITE);
+			sq->drawSquareWithFrame(m_drawColorList, getSquareSize(), Color4F::WHITE);
 		}
 		
 	}
 }
 
 bool SelectColorLayer::onTouchBegan(Touch *touch, Event *event)
-{//todo 2016/6/17
+{
+    //获得在本节点内的坐标
+    Vec2 pt2 = this->convertTouchToNodeSpace(touch);
+    for (auto sq : *m_ColorList)
+    {
+        Vec2 pos = sq->calcPosInGroup(getSquareSize());
+        Rect rect = Rect(pos, getSquareSize());
+        if (rect.containsPoint(pt2))
+        {
+            CCLOG("COLOR TOUCH TEST:%d,%d", sq->getIndexX(),sq->getIndexY());
+            m_selectedColor = sq->GetColor();
+            if(m_colorChangeCallback)
+            {
+                m_colorChangeCallback(m_selectedColor);
+            }
+            drawColorLayer();
+            return true;
+        }
+    }
+
 	return false;
 }
 
 void SelectColorLayer::onTouchMoved(Touch *touch, Event *event)
-{//todo 2016/6/17
+{
+    //获得在本节点内的坐标
+    Vec2 pt2 = this->convertTouchToNodeSpace(touch);
+    for (auto sq : *m_ColorList)
+    {
+        Vec2 pos = sq->calcPosInGroup(getSquareSize());
+        Rect rect = Rect(pos, getSquareSize());
+        if (rect.containsPoint(pt2))
+        {
+            if(m_selectedColor != sq->GetColor())
+            {
+                CCLOG("COLOR TOUCH TEST:%d,%d", sq->getIndexX(),sq->getIndexY());
+                m_selectedColor = sq->GetColor();
+                if(m_colorChangeCallback)
+                {
+                    m_colorChangeCallback(m_selectedColor);
+                }
+
+                drawColorLayer();
+            }
+        }
+    }
 
 }

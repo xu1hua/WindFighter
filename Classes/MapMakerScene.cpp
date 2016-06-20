@@ -171,6 +171,11 @@ bool MapMakerScene::init()
 	//添加选择颜色的层
 	auto colorLayer = SelectColorLayer::create();
 	colorLayer->setPosition(Vec2(0, 0));
+	colorLayer->setColorChangeListener(
+		[=](Square::SQUARE_COLOR color){
+		//todo xuhua
+	}
+		);
 	addChild(colorLayer, 0);
 	return true;
 }

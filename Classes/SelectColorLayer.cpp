@@ -65,7 +65,7 @@ void SelectColorLayer::drawColorLayer()
 
 bool SelectColorLayer::onTouchBegan(Touch *touch, Event *event)
 {
-    //获得在本节点内的坐标
+	//获得在本节点内的坐标
     Vec2 pt2 = this->convertTouchToNodeSpace(touch);
     for (auto sq : *m_ColorList)
     {
@@ -89,7 +89,7 @@ bool SelectColorLayer::onTouchBegan(Touch *touch, Event *event)
 
 void SelectColorLayer::onTouchMoved(Touch *touch, Event *event)
 {
-    //获得在本节点内的坐标
+	//获得在本节点内的坐标
     Vec2 pt2 = this->convertTouchToNodeSpace(touch);
     for (auto sq : *m_ColorList)
     {

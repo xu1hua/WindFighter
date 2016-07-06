@@ -183,7 +183,7 @@ bool SquareGroup::init()
 	);
 	addChild(m_arrowButtonDownward);
 	setUpDownArrowButtonVisible(false);
-
+	setGroupColor(Square::SC_BLUE);
 
 	return true;
 }
@@ -193,6 +193,7 @@ SquareGroup::SquareGroup()
 : _groupState(SquareGroupState::SGS_ORIGIN)
 , _groupType(ST_NONE)
 , _groupColor(Square::SC_BLACK)
+, m_selectedCallBack(nullptr)
 {
 	m_squareSize = GamePlayLayer::s_squareSize;
     auto listener = EventListenerTouchOneByOne::create();
@@ -203,6 +204,7 @@ SquareGroup::SquareGroup()
     
     this->getEventDispatcher()->addEventListenerWithSceneGraphPriority(listener, this);
 	listener->setSwallowTouches(true);
+	
 }
 
 SquareGroup::~SquareGroup()
@@ -215,6 +217,15 @@ SquareGroup::~SquareGroup()
     delete m_groupArray;
     
 }
+
+void SquareGroup::setGroupColor(Square::SQUARE_COLOR color)
+{
+	for (auto sq : *m_groupArray)
+	{
+		sq.square->SetColor(color);
+	}
+}
+
 
 void SquareGroup::SetSquareGroup(Vec2 squareSize, SquareGroup::SQUAREGROUP_TYPE type, Square::SQUARE_COLOR color /*= Square::SC_BLACK*/)
 {
@@ -237,7 +248,7 @@ void SquareGroup::CalcGroup(Square::SQUARE_COLOR color /*= Square::SC_BLACK*/)
 	}
 	m_groupArray->clear();
 
-	setGroupColor(color);
+	//setGroupColor(color);
     assert(_groupType > ST_NONE && _groupType < ST_MAX);
     for(int i = 0; i < s_Width * s_Height; i++)
     {
@@ -256,7 +267,7 @@ void SquareGroup::DrawGroup()
 		//drawOneSquare(m_squareSize, sq.second);
 		if (getGroupState() == SGS_SELECTED)
 		{
-			sq.square->drawSquareWithFrame(m_drawNode, m_squareSize,Color4F::BLUE);
+			sq.square->drawSquareWithFrame(m_drawNode, m_squareSize, Color4F::BLUE);
 		}
 		else
 		{
@@ -339,6 +350,7 @@ bool SquareGroup::onTouchBegan(Touch *touch, Event *event)
 		setArrowButtonVisible(true);
 		setBaseplateFrameByGroup(getGroupState() == SGS_PLACED);
 		setGroupState(SGS_SELECTED);
+		m_selectedCallBack(this);
 		DrawGroup();
 		return true;
 	}

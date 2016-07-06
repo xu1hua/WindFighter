@@ -96,11 +96,17 @@ public:
 	virtual void onTouchMoved(Touch *touch, Event *event) override;
 	virtual void onTouchEnded(Touch *touch, Event *event) override;
     virtual void onTouchCancelled(Touch *touch, Event *event) override;
-    
+	typedef std::function<void(SquareGroup* sg)> SquareGroupSelectedCallback;
+	void setSelectedListener(SquareGroupSelectedCallback _selectedCallBack)
+	{
+		m_selectedCallBack = _selectedCallBack;
+	}
     static const int s_Width;
     static const int s_Height;
     
-	CC_SYNTHESIZE(Square::SQUARE_COLOR, _groupColor, GroupColor);
+	//CC_SYNTHESIZE(Square::SQUARE_COLOR, _groupColor, GroupColor);
+	void setGroupColor(Square::SQUARE_COLOR color);
+	Square::SQUARE_COLOR getGroupColor(){ return _groupColor; }
 	CC_SYNTHESIZE(SquareGroupState, _groupState, GroupState);
 private:
     void CalcGroup(Square::SQUARE_COLOR color = Square::SC_BLACK);
@@ -115,5 +121,7 @@ private:
 	cocos2d::ui::Button * m_arrowButtonUpward;
 	cocos2d::ui::Button * m_arrowButtonDownward;
 	int* m_groupShape;
+	SquareGroupSelectedCallback m_selectedCallBack;
+	Square::SQUARE_COLOR _groupColor;
 };
 #endif /* defined(__SquareClear__SquareGroup__) */

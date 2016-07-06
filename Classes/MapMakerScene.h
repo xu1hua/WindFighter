@@ -10,6 +10,7 @@
 #define MapMakerScene_h__
 
 #include "cocos2d.h"
+class SquareGroup;
 class MapMakerScene : public cocos2d::Layer
 {
 public:
@@ -30,5 +31,6 @@ public:
 private:
 	void saveMapToFile();
 	std::string m_guid;
+	SquareGroup* m_lastSelectGroup;
 };
 #endif // MapMakerScene_h__

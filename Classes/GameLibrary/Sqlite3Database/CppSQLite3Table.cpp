@@ -221,7 +221,7 @@ void CppSQLite3Table::SetRow(int nRow)
 {
 	CheckResluts();
 
-	if (nRow < 0 || nRow > mnCols - 1)
+	if (nRow < 0 || nRow > mnRows - 1)
 	{
 		throw CppSQLite3Exception(CPPSQLITE_ERROR,
 			"Invalid row index requested",

@@ -61,6 +61,7 @@ bool MapMakerScene::init()
 	{
 		return false;
 	}
+	m_lastSelectGroup = nullptr;
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 	auto s = Director::getInstance()->getWinSize();
@@ -129,6 +130,11 @@ bool MapMakerScene::init()
         squareGroup->setPosition(Vec2(100,100));
         squareGroup->SetSquareGroup(Vec2(32,32),SquareGroup::SQUAREGROUP_TYPE::ST_Z,Square::SQUARE_COLOR::SC_GREEN);
         squareGroup->DrawGroup();
+		squareGroup->setSelectedListener(
+			[=](SquareGroup* sg)
+		{
+			m_lastSelectGroup = sg;
+		});
         this->addChild(squareGroup);
     }
     );
@@ -144,6 +150,9 @@ bool MapMakerScene::init()
             {
                 if(sg->getGroupState() == SGS_SELECTED)
                 {
+					assert(m_lastSelectGroup == sg);
+					
+					m_lastSelectGroup = nullptr;
                     this->removeChild(node);
                 }
             }
@@ -174,6 +183,11 @@ bool MapMakerScene::init()
 	colorLayer->setColorChangeListener(
 		[=](Square::SQUARE_COLOR color){
 		//todo xuhua
+		if (m_lastSelectGroup)
+		{
+			m_lastSelectGroup->setGroupColor(color);
+			m_lastSelectGroup->DrawGroup();
+		}
 	}
 		);
 	addChild(colorLayer, 0);

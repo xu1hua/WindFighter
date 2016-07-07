@@ -22,6 +22,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 				   ../../../Classes/Square.cpp \
 				   ../../../Classes/SquareBaseplateLayer.cpp \
 				   ../../../Classes/SquareGroup.cpp \
+				   ../../../Classes/SelectColorLayer.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/CppSQLite3.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/CppSQLite3Table.cpp \
 				   ../../../Classes/GameLibrary/Sqlite3Database/CppSQLite3Query.cpp \

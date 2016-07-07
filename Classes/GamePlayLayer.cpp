@@ -68,6 +68,7 @@ bool GamePlayLayer::init(std::string uuid)
 		auto sg = SquareGroup::create();
 		sg->SetSquareGroup(s_squareSize, SquareGroup::SQUAREGROUP_TYPE(groupType.GetInt()), Square::SQUARE_COLOR(groupColor.GetInt()));
 		sg->setPosition(Vec2((i %5) * s_squareSize.x * 4,  (i/5) * s_squareSize.y * 4));
+		sg->setSquareGroupColor((Square::SQUARE_COLOR)groupColor.GetInt());
 		sg->DrawGroup();
 		addChild(sg, 1);
 

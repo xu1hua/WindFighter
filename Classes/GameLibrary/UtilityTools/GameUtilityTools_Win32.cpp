@@ -30,8 +30,10 @@ std::string GuidToString(const GUID &guid)
 		guid.Data4[6], guid.Data4[7]);
 	return std::string(buf);
 }
+std::string g_guid = "";
 const char* GameUilityTools::CreateGuidString()
 {
-	return (GuidToString(CreateGuid())).c_str();
+	g_guid = GuidToString(CreateGuid());
+	return g_guid.c_str();
 }
 #endif

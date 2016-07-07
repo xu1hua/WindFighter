@@ -175,7 +175,7 @@ bool MapMakerScene::init()
     operationMenu->setPosition(Vec2(s.width / 2, s.height - 100));
     
 	//产生本地图的guid
-	m_guid = GameUilityTools::CreateGuidString();
+	m_guid = std::string(GameUilityTools::CreateGuidString());
 
 	//添加选择颜色的层
 	auto colorLayer = SelectColorLayer::create();
@@ -185,7 +185,7 @@ bool MapMakerScene::init()
 		//todo xuhua
 		if (m_lastSelectGroup)
 		{
-			m_lastSelectGroup->setGroupColor(color);
+			m_lastSelectGroup->setSquareGroupColor(color);
 			m_lastSelectGroup->DrawGroup();
 		}
 	}

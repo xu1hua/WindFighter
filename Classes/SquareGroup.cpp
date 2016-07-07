@@ -183,7 +183,7 @@ bool SquareGroup::init()
 	);
 	addChild(m_arrowButtonDownward);
 	setUpDownArrowButtonVisible(false);
-	setGroupColor(Square::SC_BLUE);
+	setGroupColor(Square::SC_GREEN);
 
 	return true;
 }
@@ -218,8 +218,9 @@ SquareGroup::~SquareGroup()
     
 }
 
-void SquareGroup::setGroupColor(Square::SQUARE_COLOR color)
+void SquareGroup::setSquareGroupColor(Square::SQUARE_COLOR color)
 {
+	setGroupColor(color);
 	for (auto sq : *m_groupArray)
 	{
 		sq.square->SetColor(color);
@@ -257,6 +258,7 @@ void SquareGroup::CalcGroup(Square::SQUARE_COLOR color /*= Square::SC_BLACK*/)
             m_groupArray->push_back(SquareInSquareGroup(new Square(i % s_Width, s_Height - 1 - i / s_Height, color)));
         }   
     }
+	setSquareGroupColor(getGroupColor());
 }
 
 void SquareGroup::DrawGroup()
@@ -350,7 +352,8 @@ bool SquareGroup::onTouchBegan(Touch *touch, Event *event)
 		setArrowButtonVisible(true);
 		setBaseplateFrameByGroup(getGroupState() == SGS_PLACED);
 		setGroupState(SGS_SELECTED);
-		m_selectedCallBack(this);
+		if (m_selectedCallBack)
+		{m_selectedCallBack(this);}
 		DrawGroup();
 		return true;
 	}

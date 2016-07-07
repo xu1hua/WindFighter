@@ -105,7 +105,8 @@ public:
     static const int s_Height;
     
 	//CC_SYNTHESIZE(Square::SQUARE_COLOR, _groupColor, GroupColor);
-	void setGroupColor(Square::SQUARE_COLOR color);
+	void setGroupColor(Square::SQUARE_COLOR color){ _groupColor = color; }
+	void setSquareGroupColor(Square::SQUARE_COLOR color);
 	Square::SQUARE_COLOR getGroupColor(){ return _groupColor; }
 	CC_SYNTHESIZE(SquareGroupState, _groupState, GroupState);
 private:

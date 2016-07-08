@@ -62,5 +62,6 @@ protected:
     cocos2d::DrawNode * m_drawNode;
 
 	static GamePlayLayer* s_pGamePlayLayer;
+	cocos2d::Label* m_winLabel;
 };
 #endif /* GamePlayLayer_h */

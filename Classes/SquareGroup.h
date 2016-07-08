@@ -44,6 +44,19 @@ public:
         ST_L_TURN,
         ST_Z,
         ST_Z_TURN,
+		ST_SQUARE,
+		ST_b,
+		ST_d,
+		ST_BIG_L,
+		ST_BIG_L_TURN,
+		ST_STRIP,
+		ST_SMALL_L,
+		ST_SMALL_L_TURN,
+		ST_I,
+		ST_U,
+		ST_NAIL,
+		ST_STAR,
+		ST_SMALL_STRIP,
         ST_MAX
     };
 

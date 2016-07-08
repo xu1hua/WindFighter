@@ -18,7 +18,12 @@ Color4F const s_squareColor[] =
     Color4F(0,1,0,1),
     Color4F(0,0,1,1),
     Color4F(0,0,0,1),
-    Color4F(1,1,1,1)
+    Color4F(1,1,1,1),
+	Color4F(1, 1, 0, 1),
+	Color4F(1, 0, 1, 1),
+	Color4F(0, 1, 1, 1),
+	Color4F(0.6, 0.2, 0, 1),
+	Color4F(0.5, 0.5, 0.5, 1),
 //    0xFF0000,
 //    0x00FF00,
 //    0x0000FF,
@@ -38,6 +43,11 @@ public:
         SC_BLUE,
         SC_BLACK,
         SC_WHITE,
+		SC_YELLOW,
+		SC_PINK,
+		SC_CYAN,
+		SC_BROWN,
+		SC_GRAY,
         //SC_OTHER,       //自定义颜色
         SC_MAX
     };

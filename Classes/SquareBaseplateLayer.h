@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "cocos2d.h"
 
+
 class Square;
 struct BaseSize
 {
@@ -82,7 +83,11 @@ public:
 	//获得index号方块的状态
 	SquareBaseplateState getSquareState(unsigned int index);
     void drawGrid(bool flag);
-    
+	bool checkWin();
+	void setWinListener(std::function<void()> _winCallBack)
+	{
+		m_winCallBack = _winCallBack;
+	}
 	CC_SYNTHESIZE(BaseSize, _baseSize, BaseSize);
 	CC_SYNTHESIZE(cocos2d::Vec2, _squareSize, SquareSize);
     
@@ -93,6 +98,7 @@ private:
     cocos2d::DrawNode * m_drawNodeGrid;
 	
 	static SquareBaseplateLayer* s_pSquareBaseplateLayer;
+	std::function<void()> m_winCallBack;
 };
 
 #endif//define SquareBaseplateLayer_h

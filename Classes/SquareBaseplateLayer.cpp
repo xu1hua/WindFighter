@@ -47,6 +47,7 @@ SquareBaseplateLayer::~SquareBaseplateLayer()
 	s_pSquareBaseplateLayer = NULL;
     m_drawNode->clear();
     m_drawNodeGrid->clear();
+	m_winCallBack = nullptr;
 }
 
 bool SquareBaseplateLayer::init()
@@ -81,20 +82,20 @@ void SquareBaseplateLayer::readMapBuf(std::string buf)
 
 		rapidjson::Value &mapBufValue = _json["map_buf"];
 		std::string mapBuf = mapBufValue.GetString();
-		for (int i = 0; i <= getBaseSize().width * getBaseSize().height; i++)
+		for (int i = 0; i <= getBaseSize().width * getBaseSize().height -1; i++)
 		{
 			switch (mapBuf[i])
 			{
 			case '0':
 				//上下翻转，因为gl坐标原点在左下。
 				m_baseSquareList->push_back(BaseSquare(SquareBaseplateState::SQBS_EMPTY,
-					new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_RED)
+					new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_BLACK)
 					));
 				break;
 			case '1':
 				//上下翻转，因为gl坐标原点在左下。
 				m_baseSquareList->push_back(BaseSquare(SquareBaseplateState::SQBS_MAP,
-					new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_RED)
+					new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_GRAY)
 					));
 				break;
 			default:
@@ -124,13 +125,13 @@ void SquareBaseplateLayer::readMapBufTest()
             case 0:
                 //上下翻转，因为gl坐标原点在左下。
                 m_baseSquareList->push_back(BaseSquare(SquareBaseplateState::SQBS_EMPTY,
-                                                       new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_RED)
+                                                       new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_BLACK)
                                                        ));
                 break;
             case 1:
                 //上下翻转，因为gl坐标原点在左下。
                 m_baseSquareList->push_back(BaseSquare(SquareBaseplateState::SQBS_MAP,
-                                                       new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_RED)
+                                                       new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_GRAY)
                                                        ));
                 break;
             default:
@@ -150,7 +151,7 @@ void SquareBaseplateLayer::createEmptyMap(BaseSize baseSize)
     {
         //上下翻转，因为gl坐标原点在左下。
         m_baseSquareList->push_back(BaseSquare(SquareBaseplateState::SQBS_EMPTY,
-                                               new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_RED)
+                                               new Square(i % getBaseSize().width, getBaseSize().height - 1 - i / getBaseSize().height, Square::SC_GRAY)
                                                ));
     }
 }
@@ -383,4 +384,22 @@ std::string SquareBaseplateLayer::getMapBuf()
 void SquareBaseplateLayer::update(float delta)
 {
 	drawBasesplate();
+	checkWin();
+}
+
+bool SquareBaseplateLayer::checkWin()
+{
+	for (auto sq : *m_baseSquareList)
+	{
+		if (sq.squareState != SQBS_SQUARE && sq.squareState != SQBS_MAP)
+		{
+			return false;
+		}
+	}
+	if (m_winCallBack)
+	{
+		m_winCallBack();
+	}
+	return true;
+
 }

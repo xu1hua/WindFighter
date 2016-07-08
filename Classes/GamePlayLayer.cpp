@@ -14,6 +14,7 @@
 #include "json/prettywriter.h"
 #include "json/stringbuffer.h"
 #include "GameLibrary/Sqlite3Database/GameDB.h"
+#include "Language.h"
 USING_NS_CC;
 
 Vec2 GamePlayLayer::s_squareSize = Vec2(32, 32);
@@ -42,6 +43,10 @@ bool GamePlayLayer::init(std::string uuid)
     m_drawNode = DrawNode::create();
     addChild(m_drawNode, 10);
 
+	m_winLabel = Label::createWithTTF("Success!!", "fonts/arial.ttf",48);
+	m_winLabel->setPosition(Vec2(150,900));
+	m_winLabel->setVisible(false);
+	addChild(m_winLabel);
 	m_pSquareBaseplateLayer = SquareBaseplateLayer::create();
 	m_pSquareBaseplateLayer->setPosition(Vec2(50, 300));
     //m_pSquareBaseplateLayer->readMapBufTest();
@@ -53,6 +58,10 @@ bool GamePlayLayer::init(std::string uuid)
 
 	_mapBuffer = GameDB::getInstance()->getMapBuffer(uuid);
 	m_pSquareBaseplateLayer->readMapBuf(_mapBuffer);
+	m_pSquareBaseplateLayer->setWinListener([=]()
+	{
+		m_winLabel->setVisible(true);
+	});
 //	localStorageFree();
 	addChild(m_pSquareBaseplateLayer, 0);
 
